@@ -12,6 +12,8 @@
 }
 body{
     overflow-x: hidden;
+    padding: 0 !important;
+    margin: 0 !important;
 }
 html,body{
     font-family: 'Roboto Condensed', sans-serif;
@@ -29,6 +31,9 @@ html,body{
 }
 .f3{
     font-size:16pt;
+}
+.fw2{
+    font-weight: 504;   
 }
 .fw3{
     font-weight: 700;
@@ -61,31 +66,33 @@ html,body{
 nav{ 
     /* margin-bottom:32px; */
     width:100vw;
-    height:40px;
     z-index:2;
     position: fixed !important;
-    top:0;
-    padding:8px;
+    padding:0px 8px;
     display: grid;
     /* gap:8px; */
-    grid-template-columns: 8fr repeat(7,1fr);
+    grid-template-columns: repeat(2,1fr);
     font-weight:888;
-    background-color:rgba(255, 255, 255, 1);
+    background-color:rgb(255, 255, 255);
 }
+
 .logo{
-    margin:0px;
+    width:48px !important;
+    height: 48px !important;
 }
+.navItemWrapper{
+    display: grid;
+    grid-template-columns: repeat(9,1fr);
+    gap:8px;
+}
+
 .navItem{
-    margin:0px 8px;
-    padding: 8px;
-    border-radius:8px;
-    transition: all 0.16s linear;
+padding:8px;
+margin:0px 16px;
 }
 .navItem:hover{
-    color:#000;
-    background: linear-gradient(90deg, var(--primary) 56%, rgba(196, 196, 196, 0) 99.15%);
-    border-radius:8px;
-}
+    color:var(--secondary)
+  }
 
 
 /*Section1 */
@@ -136,7 +143,7 @@ cursor:pointer;
 
 /*Waves animation*/
 .wave1 path{
-    
+
     animation:anim 56s infinite linear;
 }
 
@@ -280,7 +287,7 @@ summary {
 }
 details p {
     cursor: auto;
-    background:var(--neutral);
+    background:rgb(219, 219, 203);
     position: absolute;
     border-radius: 8px;
 
@@ -291,7 +298,7 @@ details p:before {
     content: "";
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;
-    border-bottom: 16px solid var(--neutral);
+    border-bottom: 16px solid rgb(219, 219, 203);
     top: -8px;
     position: absolute;
     left: 24px;
@@ -317,22 +324,61 @@ details[open] p {
     gap:48px 0px;
 }
 .wave2 path{
-    
-    animation:wave2Anim 16s infinite linear;
+  /* animation:wave2Anim 16s infinite linear; */
 }
-/* @keyframes wave2Anim {
-    0%{
-        d:path("M0,80L21.8,75C43.6,70,87,60,131,51.7C174.5,43,218,37,262,35C305.5,33,349,37,393,36.7C436.4,37,480,33,524,33.3C567.3,33,611,37,655,36.7C698.2,37,742,33,785,26.7C829.1,20,873,10,916,11.7C960,13,1004,27,1047,40C1090.9,53,1135,67,1178,68.3C1221.8,70,1265,60,1309,61.7C1352.7,63,1396,77,1440,71.7C1483.6,67,1527,43,1571,41.7C1614.5,40,1658,60,1702,58.3C1745.5,57,1789,33,1833,25C1876.4,17,1920,23,1964,31.7C2007.3,40,2051,50,2095,51.7C2138.2,53,2182,47,2225,43.3C2269.1,40,2313,40,2356,40C2400,40,2444,40,2487,46.7C2530.9,53,2575,67,2618,60C2661.8,53,2705,27,2749,16.7C2792.7,7,2836,13,2880,18.3C2923.6,23,2967,27,3011,23.3C3054.5,20,3098,10,3120,5L3141.8,0L3141.8,100L3120,100C3098.2,100,3055,100,3011,100C2967.3,100,2924,100,2880,100C2836.4,100,2793,100,2749,100C2705.5,100,2662,100,2618,100C2574.5,100,2531,100,2487,100C2443.6,100,2400,100,2356,100C2312.7,100,2269,100,2225,100C2181.8,100,2138,100,2095,100C2050.9,100,2007,100,1964,100C1920,100,1876,100,1833,100C1789.1,100,1745,100,1702,100C1658.2,100,1615,100,1571,100C1527.3,100,1484,100,1440,100C1396.4,100,1353,100,1309,100C1265.5,100,1222,100,1178,100C1134.5,100,1091,100,1047,100C1003.6,100,960,100,916,100C872.7,100,829,100,785,100C741.8,100,698,100,655,100C610.9,100,567,100,524,100C480,100,436,100,393,100C349.1,100,305,100,262,100C218.2,100,175,100,131,100C87.3,100,44,100,22,100L0,100Z")
-    }
-    50%{
-        d:path("M0,0L26.7,4.2C53.3,8,107,17,160,20.8C213.3,25,267,25,320,45.8C373.3,67,427,108,480,129.2C533.3,150,587,150,640,154.2C693.3,158,747,167,800,170.8C853.3,175,907,175,960,154.2C1013.3,133,1067,92,1120,79.2C1173.3,67,1227,83,1280,79.2C1333.3,75,1387,50,1440,37.5C1493.3,25,1547,25,1600,54.2C1653.3,83,1707,142,1760,137.5C1813.3,133,1867,67,1920,50C1973.3,33,2027,67,2080,79.2C2133.3,92,2187,83,2240,100C2293.3,117,2347,158,2400,150C2453.3,142,2507,83,2560,66.7C2613.3,50,2667,75,2720,75C2773.3,75,2827,50,2880,45.8C2933.3,42,2987,58,3040,79.2C3093.3,100,3147,125,3200,125C3253.3,125,3307,100,3360,83.3C3413.3,67,3467,58,3520,75C3573.3,92,3627,133,3680,145.8C3733.3,158,3787,142,3813,133.3L3840,125L3840,250L3813.3,250C3786.7,250,3733,250,3680,250C3626.7,250,3573,250,3520,250C3466.7,250,3413,250,3360,250C3306.7,250,3253,250,3200,250C3146.7,250,3093,250,3040,250C2986.7,250,2933,250,2880,250C2826.7,250,2773,250,2720,250C2666.7,250,2613,250,2560,250C2506.7,250,2453,250,2400,250C2346.7,250,2293,250,2240,250C2186.7,250,2133,250,2080,250C2026.7,250,1973,250,1920,250C1866.7,250,1813,250,1760,250C1706.7,250,1653,250,1600,250C1546.7,250,1493,250,1440,250C1386.7,250,1333,250,1280,250C1226.7,250,1173,250,1120,250C1066.7,250,1013,250,960,250C906.7,250,853,250,800,250C746.7,250,693,250,640,250C586.7,250,533,250,480,250C426.7,250,373,250,320,250C266.7,250,213,250,160,250C106.7,250,53,250,27,250L0,250Z")
-    }
-    100%{
-        d:path("M0,80L21.8,75C43.6,70,87,60,131,51.7C174.5,43,218,37,262,35C305.5,33,349,37,393,36.7C436.4,37,480,33,524,33.3C567.3,33,611,37,655,36.7C698.2,37,742,33,785,26.7C829.1,20,873,10,916,11.7C960,13,1004,27,1047,40C1090.9,53,1135,67,1178,68.3C1221.8,70,1265,60,1309,61.7C1352.7,63,1396,77,1440,71.7C1483.6,67,1527,43,1571,41.7C1614.5,40,1658,60,1702,58.3C1745.5,57,1789,33,1833,25C1876.4,17,1920,23,1964,31.7C2007.3,40,2051,50,2095,51.7C2138.2,53,2182,47,2225,43.3C2269.1,40,2313,40,2356,40C2400,40,2444,40,2487,46.7C2530.9,53,2575,67,2618,60C2661.8,53,2705,27,2749,16.7C2792.7,7,2836,13,2880,18.3C2923.6,23,2967,27,3011,23.3C3054.5,20,3098,10,3120,5L3141.8,0L3141.8,100L3120,100C3098.2,100,3055,100,3011,100C2967.3,100,2924,100,2880,100C2836.4,100,2793,100,2749,100C2705.5,100,2662,100,2618,100C2574.5,100,2531,100,2487,100C2443.6,100,2400,100,2356,100C2312.7,100,2269,100,2225,100C2181.8,100,2138,100,2095,100C2050.9,100,2007,100,1964,100C1920,100,1876,100,1833,100C1789.1,100,1745,100,1702,100C1658.2,100,1615,100,1571,100C1527.3,100,1484,100,1440,100C1396.4,100,1353,100,1309,100C1265.5,100,1222,100,1178,100C1134.5,100,1091,100,1047,100C1003.6,100,960,100,916,100C872.7,100,829,100,785,100C741.8,100,698,100,655,100C610.9,100,567,100,524,100C480,100,436,100,393,100C349.1,100,305,100,262,100C218.2,100,175,100,131,100C87.3,100,44,100,22,100L0,100Z")
-    }
-} */
 
-
+/*typing text styling and animations*/
+.wrapper{
+    text-align: left;
+}
+.wrapper .static-txt{
+  color: rgb(70, 70, 70);
+  font-size: 56px;
+  font-weight: 400;
+}
+.wrapper .dynamic-txts{
+  margin-left: 16px;
+  height: 88px;
+  line-height:88px;
+  overflow: hidden;
+}
+.dynamic-txts li{
+  list-style: none;
+  color: var(--secondary);
+  font-size: 56px;
+  font-weight:560;
+  position: relative;
+  top: 0;
+  animation: slide 12s steps(4) infinite;
+}
+@keyframes slide {
+  100%{
+    top: -360px;
+  }
+}
+.dynamic-txts li span{
+  position: relative;
+  margin: 8px 0;
+  line-height: 90px;
+}
+.dynamic-txts li span::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #ffffff;
+  border-left: 2px solid var(--secondary);
+  animation: typing 3s steps(10) infinite;
+}
+@keyframes typing {
+  40%, 60%{
+    left: calc(100% + 30px);
+  }
+  100%{
+    left: 0;
+  }
+}
 .footer{
     margin:-4px 0px;
     color: rgb(194, 194, 194);
@@ -341,24 +387,36 @@ details[open] p {
     grid-template-columns: repeat(4,1fr) ;
     }
 
-
+.subHead{
+    display: none;
+}
 /*Styles for mobile screens less than 800px width*/
 @media(max-width:800px){
+    body{
+        overflow-x: hidden !important;
+        padding: 0px !important;
+        margin: 0px !important;
+    }
+    .logo{
+        width:32px;
+        height:32px;
+    }
+    .typingtxt{
+        display:none;
+    }
     .mainHead{
         font-size: 56px;
     }
+    .subHead{
+        display: flex;
+        color:rgb(84, 84, 84);
+    }
     nav{
-        height:48px;
-        padding:8px;
         overflow-x: scroll;
     }
-    .navItem{
-        padding:0px 16px;
-    }
-
-    .navItem:hover{
-      border-radius: 8px;
-    }
+   .navItem{
+       padding:4px;
+   }
     .tracksWrapper{
        display: flex;
        flex-direction: column;
@@ -397,4 +455,5 @@ details[open] p {
     .svgLanding{
         display: none !important;
     }
+
 }

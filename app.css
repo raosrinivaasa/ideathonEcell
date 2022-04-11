@@ -71,7 +71,7 @@ nav{
     padding:0px 8px;
     display: grid;
     /* gap:8px; */
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns:repeat(3,1fr);
     font-weight:888;
     background-color:rgb(255, 255, 255);
 }
@@ -82,7 +82,7 @@ nav{
 }
 .navItemWrapper{
     display: grid;
-    grid-template-columns: repeat(9,1fr);
+    grid-template-columns: repeat(6,1fr);
     gap:8px;
 }
 
@@ -173,12 +173,11 @@ cursor:pointer;
     /* background: linear-gradient(180deg, #F36B3D 8%, rgb(255, 255, 255) 56.41%); */
     background: linear-gradient(180deg, #F36B3D 8%, rgb(255, 255, 255) 56.41%);
     width:100vw;
-    height:100vh;    
 }
 
 .about{
     color: var(--navbg);
-    margin:0px 8px;
+    margin:-1px 8px 8px 0px;
     padding:64px;
     display: grid;
     grid-template-columns: repeat(2,1fr);
@@ -193,13 +192,13 @@ cursor:pointer;
 
 /*Section 3 Styling Start*/
 /* .sec3{
-  
-
+ 
 } */
 .tracksWrapper{
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    margin:0px 96px;
+    gap:40px;
+
 }
 .trackCard{
     /* border: 1px solid rgb(43, 42, 42); */
@@ -209,7 +208,7 @@ cursor:pointer;
     border-bottom-right-radius: 32px;
     -moz-box-shadow: 8px 8px 40px 0px rgba(129, 129, 129, 0.75);
     box-shadow: 0px 8px 40px 0px rgba(129, 129, 129, 0.75);
-    margin:0px 128px;
+ 
 }
 
 .t1Img,.t2Img,.t3Img{
@@ -290,8 +289,6 @@ details p {
     background:rgb(219, 219, 203);
     position: absolute;
     border-radius: 8px;
-
-
 }
 /*Styling for the triangle at top*/
 details p:before {
@@ -380,7 +377,7 @@ details[open] p {
   }
 }
 .footer{
-    margin:-4px 0px;
+    margin:0px 0px;
     color: rgb(194, 194, 194);
     background-color: var(--dark);
     display: grid; 
@@ -392,10 +389,10 @@ details[open] p {
 }
 /*Styles for mobile screens less than 800px width*/
 @media(max-width:800px){
-    body{
-        overflow-x: hidden !important;
-        padding: 0px !important;
-        margin: 0px !important;
+    html{
+        overflow-x: scroll !important;
+        /* padding:0px !important;       
+        margin: 0px !important; */
     }
     .logo{
         width:32px;

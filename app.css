@@ -110,10 +110,14 @@ margin:0px 16px;
 /*Section1 */
 .sec1{
     width:100vw;
-    height:40vh;
-    padding-top:88px;
-    flex-wrap: wrap; 
+    height:56vh;
+    padding-top:112px;
+    /* flex-wrap: wrap;  */
     color: var(--navbg);
+}
+.sponsorSvg{
+    width:100px;
+    height:100px;
 }
 .mainHead{
     color:#272729;
@@ -126,18 +130,23 @@ margin:0px 16px;
     animation: txtAnim 8s infinite LINEAR;
 }
 .subHead{
+    font-family: 'Merienda', cursive;
     display: none; /*Disabling for larger screens*/
 }
 
 
 /*typing text styling and animations Start*/
+
 .wrapper{
+    /* font-family: 'Righteous', cursive; */
+    font-family: 'Bangers', cursive;
+    font-family: 'Merienda', cursive;
     text-align: left;
 }
 .wrapper .static-txt{
-  color: rgb(70, 70, 70);
+  color: rgb(40, 40, 40);
   font-size: 56px;
-  font-weight: 400;
+  font-weight: 200;
 }
 .wrapper .dynamic-txts{
   margin-left: 16px;
@@ -185,7 +194,7 @@ margin:0px 16px;
 /*typing text styling and animations End*/
 
 .regBtn{
-    z-index:1;
+    z-index:100;
     padding:16px;
     margin:16px;
     font-size:16px;
@@ -440,7 +449,10 @@ details[open] p {
         width:32px;
         height:32px;
     }
-    .typingtxt{
+    .sec1{
+        padding-top: 32px;
+    }
+    .aboutImg,.typingtxt{
         display:none;
     }
     .mainHead{

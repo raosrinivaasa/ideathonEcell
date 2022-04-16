@@ -9,7 +9,15 @@
 }
 *{
     transition: all 0.16s linear;
-}
+
+    }
+    
+    @keyframes fadein{
+        0% { opacity:0; }
+        66% { opacity:0; }
+        100% { opacity:1; }
+    }
+
 body{
     overflow-x: hidden;
     padding: 0 !important;
@@ -33,7 +41,7 @@ html,body{
     font-size:16pt;
 }
 .fw2{
-    font-weight: 504;   
+    font-weight: 580;   
 }
 .fw3{
     font-weight: 700;
@@ -103,7 +111,7 @@ padding:8px;
 margin:0px 16px;
 }
 .navItem:hover{
-    color:var(--secondary)
+    color:var(--secondary);
   }
 
 
@@ -263,6 +271,9 @@ cursor:pointer;
     align-items: center;
     text-align: center;
 }
+.about  p{
+text-align: left;
+}
 .svgLanding{
     width:512px;
     height:auto;
@@ -270,56 +281,75 @@ cursor:pointer;
 
 
 /*Section 3 Styling Start*/
-/* .sec3{
- 
-} */
-.tracksWrapper{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap:40px;
-
+.sec3,.sec4{
+    color: #fff;
+    width:100vw;
 }
-.trackCard{
-    /* border: 1px solid rgb(43, 42, 42); */
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-    border-bottom-left-radius: 32px;
-    border-bottom-right-radius: 32px;
-    -moz-box-shadow: 8px 8px 40px 0px rgba(129, 129, 129, 0.75);
-    box-shadow: 0px 8px 40px 0px rgba(129, 129, 129, 0.75);
- 
+.sec3{
+background-image: url(./svgs/bganimated.svg);
+background-size: 100vw;
+/* background-size: 100vh; */
+}
+.trackWrapper{
+    /* border: 1px solid #00b2c6; */
+    border-radius: 8px;
+    /* animation: borderAnim 2s infinite linear; */
+}
+.splTrackWrapper{
+
+    background-color: rgba(255,255,255, 0.1);
+    border-radius: 8px;
 }
 
-.t1Img,.t2Img,.t3Img{
-    padding:8px;
-    width:128px;
-    height: 128px;
+.trackWrapper{
+    /* background-image:url(./images/prizeInHand.jpg); */
+}
+.trackImg{
+width:256px;
+height:256px;
+}
+
+.prize1,.prize2,.prize3{
+    /* color: #03071e; */
+    border-radius: 8px;
 }
 .prize1{
-    background: linear-gradient(90deg, #FFD700 5.53%, rgba(255, 216, 2, 0.06) 104.62%);
+    color: #FFD700;
 }
 .prize2{
-    background: linear-gradient(90deg, #C6C5BF 5.53%, rgba(210, 210, 210, 0) 104.62%);
+    color: #c0c0c0;
 }
 .prize3{
-    background: linear-gradient(90deg, #A56F61 0%, rgba(165, 111, 97, 0) 100%);
+    color: #CD7F32;
 }
 
-/*Timeline section*/
+/*Timeline section Start*/
+.bgPrism{
+    opacity:0.8;
+}
 
-.tWrapper{
+.sec4{
+    background-image: url(./svgs/bg4prism.svg);
+    color:var(--navbg);
+}
+
+.timeWrapper {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     grid-column-gap: 0px;
-    grid-row-gap: 0px; 
-}
-
-.tCard1 { grid-area: 1 / 1 / 2 / 2; }
-.tCard2 { grid-area: 2 / 3 / 3 / 4; }
-.tCard3 { grid-area: 3 / 1 / 4 / 2; }
-.tCard4 { grid-area: 4 / 3 / 5 / 4; }
-.rope { grid-area: 1 / 2 / 5 / 3; }
+    grid-row-gap: 0px;
+    }
+    
+    .tCard1 { grid-area: 2 / 1 / 3 / 2; }
+    .tCard2 { grid-area: 1 / 2 / 2 / 3; }
+    .tCard3 { grid-area: 1 / 3 / 2 / 4; }
+    .tCard4 { grid-area: 2 / 4 / 3 / 5; }
+    .rope { grid-area: 2 / 2 / 4 / 4; }
+    .timeRope{
+        width:256px;
+        height:256px;
+    }
 
 .tCard1,.tCard2,.tCard3,.tCard4{
   border-radius: 8px;
@@ -327,19 +357,36 @@ cursor:pointer;
   height:128px;
   font-weight: 560;
   box-shadow: 0px 4px 8px 0px rgba(129, 129, 129, 0.75);
+  animation: cardShadow 4s  infinite linear;
+  animation-direction: alternate;
 }
 .tCard1{
-    background-color: #c6c6c6;
+    background: linear-gradient(180deg,#EE8C54 10%, #fff 90%);
 }
 .tCard2{
-    background-color: #9cc4d1;
+    background: linear-gradient(180deg, #0E4EA8 0%, rgba(14, 78, 168, 0) 100%);
 }
 .tCard3{
-    background-color: #e9e59d;
+    background: linear-gradient(180deg, #0E4EA8 0%, rgba(14, 78, 168, 0) 100%);
 }
 .tCard4{
-    background-color: #959dcb;
+    background: linear-gradient(180deg,#EE8C54 10%, #fff 90%);
+}  
+/* .box{
+    width:200px;
+    height:200px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+ 
+} */
+@keyframes cardShadow {
+    from{
+        box-shadow: 0px 4px 8px 0px rgba(129, 129, 129, 0.75);
+    }
+    to{
+        box-shadow: rgba(7, 131, 240, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+    }
 }
+/*Timeline section End*/
 
 /*FAQs section styling*/
 .sec6{
@@ -413,13 +460,11 @@ details[open] p {
     margin:0px 0px;
     color: #ffffff;
     background-color: var(--dark);
-
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(1, 1fr);
     grid-column-gap: 8px;
     grid-row-gap: 0px; 
-   
 }
 
 
@@ -468,16 +513,6 @@ details[open] p {
    .navItem{
        padding:4px;
    }
-    .tracksWrapper{
-       display: flex;
-       flex-direction: column;
-       margin:8px !important;
-    }
-    .trackCard{
-        width:304px;
-        height:400px;
-        margin:32px 8px;
-    }
     .t1Img,.t2Img,.t3Img{
         width:56px;
         height: 56px;
@@ -496,12 +531,17 @@ details[open] p {
        align-items:center;       
     }
    
-    .tWrapper{
+    .timeWrapper{
         margin:24px; 
     }
-    .rope{
-        border-radius: 32px;
-        margin:0px 4px;
+    .tCard1,.tCard2,.tCard3,.tCard4{
+        border-radius: 8px;
+        width:64px;
+        height:64px;
+    }
+    .timeRope{
+        width:128px;
+        height:128px;
     }
     .svgLanding{
         display: none !important;

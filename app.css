@@ -390,8 +390,8 @@ height:256px;
 /*Sponsor section Start*/
 .sec5{
     width:100vw;
-    height: 100vh;
-    background-image: url(./images/bgBluesquares.jpg);
+    /* height: 100vh; */
+    background-image: url(./svgs/bg4prismBlue.svg);
     background-size:100vw;
     }
 
@@ -498,10 +498,8 @@ details[open] p {
     }
 /*Styles for mobile screens less than 800px width*/
 @media(max-width:800px){
-    html{
-        overflow-x:visible !important;
-        /* padding:0px !important;       
-        margin: 0px !important; */
+    html,body{
+        overflow-x: hidden !important;
     }
     .logo{
         width:32px;
@@ -531,7 +529,6 @@ details[open] p {
         height: 56px;
         padding:8px;
     }
-
     .faqsWrapper{
         display: grid;
         grid-template-columns: repeat(2,1fr);
@@ -552,6 +549,10 @@ details[open] p {
     .sponsorLogo{
         width: 196px;
         height:80px;
+    }
+    .logoFtr{
+        width:48px;
+        height:48px;
     }
     .timeWrapper {
         display: grid;

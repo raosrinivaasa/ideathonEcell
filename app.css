@@ -75,13 +75,20 @@ html,body{
     align-items:center;
     text-align: center;
 }
+.rflex{ /* common Flex-Row properties */
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align: center;
+    flex-wrap: wrap;
+}
 /*Disabling scroll bar visibiity */
 
 /*Navbar*/
 nav{ 
     /* margin-bottom:32px; */
     width:100vw;
-    z-index:2;
+    z-index:1;
     position: fixed !important;
     padding:0px 8px;
     display: grid;
@@ -199,7 +206,7 @@ margin:0px 16px;
 /*typing text styling and animations End*/
 
 .regBtn{
-    z-index:100;
+   
     padding:16px;
     margin:16px;
     font-size:16px;
@@ -290,7 +297,6 @@ background-size: 100vw;
     border-radius: 8px; 
 }
 .splTrackWrapper{
-
     background-color: rgba(255,255,255, 0.1);
     border-radius: 8px;
 }
@@ -381,6 +387,19 @@ height:256px;
 }
 /*Timeline section End*/
 
+/*Sponsor section Start*/
+.sec5{
+    width:100vw;
+    height: 100vh;
+    background-image: url(./images/bgBluesquares.jpg);
+    background-size:100vw;
+    }
+
+    .sponsorLogo{
+    width:344px;
+    height:128px;
+    }    
+
 /*FAQs section styling*/
 .sec6{
     height:64vh;
@@ -427,17 +446,16 @@ details[open] p {
 @keyframes animateDown {
     0% {
         opacity: 0;
+       
         transform: translatey(-16px);
    }
     100% {
         opacity: 1;
+        z-index: 1;
         transform: translatey(0);
    }
 }
 /*Details and summary styling End*/
-.sec6{
-
-}
  .faqsWrapper{
     display: grid;
     grid-template-columns: repeat(4,1fr);
@@ -459,12 +477,11 @@ details[open] p {
     grid-column-gap: 8px;
     grid-row-gap: 0px; 
 }
-
-
     .fCol1 { grid-area: 1 / 1 / 2 / 2; }
     .fCol2 { grid-area: 1 / 2 / 2 / 3; }
     .fCol3 { grid-area: 1 / 3 / 2 / 4; }
     .fRow2 { grid-area: 2 / 1 / 3 / 4; }
+    
     .socialLogo{
         width:32px;
         height:32px;
@@ -475,11 +492,14 @@ details[open] p {
     .fRow2 a{
         color: #fff;
     }
-   
+    .logoFtr{
+        width:88px;
+        height:88px;
+    }
 /*Styles for mobile screens less than 800px width*/
 @media(max-width:800px){
     html{
-        overflow-x: scroll !important;
+        overflow-x:visible !important;
         /* padding:0px !important;       
         margin: 0px !important; */
     }
@@ -494,7 +514,7 @@ details[open] p {
         display:none;
     }
     .mainHead{
-        font-size: 48px;
+        font-size: 40px;
     }
     .subHead{
         display: flex;
@@ -529,6 +549,10 @@ details[open] p {
     .rope{
         display:block;
     }
+    .sponsorLogo{
+        width: 196px;
+        height:80px;
+    }
     .timeWrapper {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -548,3 +572,4 @@ details[open] p {
         display: none !important;
     }
 }
+

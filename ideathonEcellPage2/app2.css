@@ -134,3 +134,9 @@ padding-top: 88px;
     .fRow2 a{
         color: #fff;
     }
+@media(max-width:560px){
+    .logoFtr{
+        width:48px;
+        height:48px;
+    }
+}

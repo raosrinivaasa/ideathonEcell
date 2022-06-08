@@ -1,0 +1,34 @@
+.sec{
+    background: linear-gradient(-45deg, #fda185,#d6f4ff, #ffddfd);
+    background-size: 400% 400%;
+    animation: gradient 24s ease infinite;
+}
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+.tleft {
+  text-align: left;
+  width: 64%;
+}
+.imgSize {
+  width: 560px;
+  height: 400px;
+}
+
+@media (max-width: 560px) {
+  .tleft {
+    width: 88%;
+  }
+  .imgSize {
+    width: 300px;
+    height: auto;
+  }
+}

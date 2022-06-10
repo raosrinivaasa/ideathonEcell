@@ -17,7 +17,7 @@ html,body{
     flex-direction: column;
     justify-content:center;
     align-items:center;
-    flex-wrap: wrap;
+    flex-wrap: wrap !important;
     text-align: center;
 }
 .mp8{

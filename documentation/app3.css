@@ -1,29 +1,64 @@
 .sec{
-    background: linear-gradient(-45deg, #fda185,#d6f4ff, #ffddfd);
-    background-size: 400% 400%;
-    animation: gradient 24s ease infinite;
+  /* background-color: blueviolet; */
 }
-@keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
+.f1{
+  font-size: 64px;
 }
+.f2{
+  font-size: 40px;
+}
+.f3{
+  font-size: 24px;
+}
+.f4{
+  font-size: 16px;
+}
+.rflex{
+  flex-wrap: nowrap;
+}
+
 .tleft {
   text-align: left;
-  width: 64%;
 }
-.imgSize {
+.imgLarge {
   width: 560px;
   height: 400px;
 }
+.imgSmall{
+  width: 300px;
+  border-radius:8px;
+}
+.img100{
+  width:100%;
+}
+.wrapper{
+  width:100vw; 
+}
+.imgSponsor{
+  width:160px;
+  height: auto;
+}
+.row3{
+background-color: rgb(161, 161, 161);
+width: 100vw;
+}
 
-@media (max-width: 560px) {
+.fc{
+  width:max-content;
+}
+.row4{
+}
+.rotate{
+  transform: rotate(-90deg)
+}
+.card1{
+  color: #fff;
+  background-color: rgb(48, 48, 48);
+  box-shadow: 0px 0px 2px 1px rgb(33, 33, 33);
+  border-radius: 4px;
+}
+
+@media (max-width: 960px) {
   .tleft {
     width: 88%;
   }
@@ -31,4 +66,10 @@
     width: 300px;
     height: auto;
   }
+  .rflex{
+    flex-wrap: wrap !important;
+  }
+.rotate{
+  transform: rotate(0deg)
+}
 }

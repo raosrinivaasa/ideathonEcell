@@ -20,6 +20,11 @@
 .tleft {
   text-align: left;
 }
+.imgSize {
+  width: 600px;
+  height: auto;
+  object-fit: cover;
+}
 .imgLarge {
   width: 560px;
   height: 400px;
@@ -27,6 +32,12 @@
 .imgSmall{
   width: 300px;
   border-radius:8px;
+}
+.imgSmallRound{
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius:50%;
 }
 .img100{
   width:100%;
@@ -57,7 +68,9 @@ width: 100vw;
   box-shadow: 0px 0px 2px 1px rgb(33, 33, 33);
   border-radius: 4px;
 }
-
+.row5{
+  font-style:italic;
+}
 @media (max-width: 960px) {
   .tleft {
     width: 88%;
@@ -65,6 +78,7 @@ width: 100vw;
   .imgSize {
     width: 300px;
     height: auto;
+    object-fit: cover;
   }
   .rflex{
     flex-wrap: wrap !important;
